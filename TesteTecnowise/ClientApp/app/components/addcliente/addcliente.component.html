@@ -1,0 +1,40 @@
+﻿<h1>{{title}}</h1>
+<h3>Cliente</h3>
+<hr />
+
+<form [formGroup]="clienteForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+    <div class="form-group row">
+        <label class=" control-label col-md-12">Nome</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="nome">
+        </div>
+        <span class="text-danger" *ngIf="nome.invalid && formDir.submitted">
+            Nome é obrigatório.
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Endereco">Endereço</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="endereco">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Telefone">Telefone</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="telefone">
+        </div>        
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Email">Email</label>
+        <div class="col-md-4">
+            <input class="form-control" type="email" formControlName="email">
+        </div>
+        <span class="text-danger" *ngIf="email.invalid && formDir.submitted">
+            Email é obrigatório
+        </span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Save</button>
+        <button class="btn" (click)="cancel()">Cancel</button>
+    </div>
+</form>
