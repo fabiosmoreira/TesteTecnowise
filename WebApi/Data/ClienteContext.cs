@@ -8,7 +8,7 @@ namespace WebApi.Models
 {
     public class ClienteContext : DbContext
     {
-        public ClienteContext (DbContextOptions<ClienteContext> options)
+        public ClienteContext(DbContextOptions<ClienteContext> options)
             : base(options)
         {
         }
