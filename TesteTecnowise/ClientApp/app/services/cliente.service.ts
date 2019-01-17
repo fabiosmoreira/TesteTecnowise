@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 export class ClienteService {
 
     private headers: Headers;
-    private accessPointUrl: string = 'http://localhost:62024/api/clientes/';
+    public accessPointUrl: string = 'http://localhost:62024/api/clientes/';
 
     constructor(private http: Http) {
         this.headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8' });

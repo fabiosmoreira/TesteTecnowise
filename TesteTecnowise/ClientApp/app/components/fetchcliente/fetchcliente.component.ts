@@ -23,7 +23,7 @@ export class FetchClienteComponent {
     }
 
     delete(clienteID) {
-        var ans = confirm("Do you want to delete customer with Id: " + clienteID);
+        var ans = confirm("Deseja realmente excluir o cliente com Id: " + clienteID);
         if (ans) {
             this._clienteService.deleteCliente(clienteID).subscribe((data) => {
                 this.getClientes();

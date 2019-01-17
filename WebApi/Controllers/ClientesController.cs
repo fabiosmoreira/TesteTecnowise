@@ -21,6 +21,10 @@ namespace WebApi.Controllers
         }
 
         // GET: api/Clientes
+        /// <summary>
+        /// Buscar dados de todos os clientes cadastrados.
+        /// </summary>
+        /// <returns>Uma lista com dados de todos os clientes.</returns>
         [HttpGet]
         public IEnumerable<Cliente> GetCliente()
         {
@@ -28,6 +32,11 @@ namespace WebApi.Controllers
         }
 
         // GET: api/Clientes/5
+        /// <summary>
+        /// Buscar dados de um cliente especifico, passando o Id.
+        /// </summary>
+        /// <param name="id">Id do cliente no banco de dados.</param>
+        /// <returns>Um objeto com dados do cliente</returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCliente([FromRoute] int id)
         {
@@ -46,6 +55,12 @@ namespace WebApi.Controllers
             return Ok(cliente);
         }
 
+        /// <summary>
+        /// Atualizar dados de um determinado cliente.
+        /// </summary>
+        /// <param name="id">Id do cliente a ser atualizado.</param>
+        /// <param name="cliente">Dados novos para serem atualizados.</param>
+        /// <returns>Um objeto Microsoft.AspNetCore.Mvc.NoContentResult.</returns>
         // PUT: api/Clientes/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCliente([FromRoute] int id, [FromBody] Cliente cliente)
@@ -82,6 +97,11 @@ namespace WebApi.Controllers
         }
 
         // POST: api/Clientes
+        /// <summary>
+        /// Cadastrar um novo cliente no banco de dados.
+        /// </summary>
+        /// <param name="cliente">Dados do cliente.</param>
+        /// <returns>Um objeto Microsoft.AspNetCore.Mvc.CreatedAtActionResult.</returns>
         [HttpPost]
         public async Task<IActionResult> PostCliente([FromBody] Cliente cliente)
         {
@@ -97,6 +117,11 @@ namespace WebApi.Controllers
         }
 
         // DELETE: api/Clientes/5
+        /// <summary>
+        /// Excluir um determinado cliente do banco de dados.
+        /// </summary>
+        /// <param name="id">Id do cliente a ser excluido.</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente([FromRoute] int id)
         {

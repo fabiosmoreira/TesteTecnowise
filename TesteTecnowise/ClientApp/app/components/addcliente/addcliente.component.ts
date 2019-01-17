@@ -34,7 +34,7 @@ export class AddClienteComponent implements OnInit {
 
     ngOnInit() {
         if (this.id > 0) {
-            this.title = "Editar";
+            this.title = "Editar Cliente";
             this._clienteService.getClienteById(this.id)
                 .subscribe(resp => this.clienteForm.setValue(resp)
                 , error => this.errorMessage = error);
@@ -53,7 +53,7 @@ export class AddClienteComponent implements OnInit {
                     this._router.navigate(['/fetch-cliente']);
                 }, error => this.errorMessage = error)
         }
-        else if (this.title == "Editar") {
+        else if (this.title == "Editar Cliente") {
             this._clienteService.updateCliente(this.clienteForm.value)
                 .subscribe((data) => {
                     this._router.navigate(['/fetch-cliente']);

@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { AddClienteComponent } from './components/addcliente/addcliente.component';
 import { FetchClienteComponent } from './components/fetchcliente/fetchcliente.component';
 import { ClienteService } from './services/cliente.service';
@@ -16,9 +14,7 @@ import { ClienteService } from './services/cliente.service';
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
+        NavMenuComponent,        
         AddClienteComponent,
         FetchClienteComponent,
         HomeComponent
@@ -29,14 +25,12 @@ import { ClienteService } from './services/cliente.service';
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
+            { path: '', redirectTo: 'fetch-cliente', pathMatch: 'full' },
+            { path: 'home', component: HomeComponent },            
             { path: 'add-cliente', component: AddClienteComponent },            
             { path: 'cliente/edit/:id', component: AddClienteComponent },
-            { path: 'fetch-cliente', component: FetchClienteComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
-            { path: '**', redirectTo: 'home' }
+            { path: 'fetch-cliente', component: FetchClienteComponent },                        
+            { path: '**', redirectTo: 'home' }            
         ])
     ],
     providers: [ClienteService]

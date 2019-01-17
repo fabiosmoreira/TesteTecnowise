@@ -5,9 +5,7 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{A56FD69E-B74D-41DF-A751-F2640B13143A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppTecnowise", "AppTecnowise\AppTecnowise.csproj", "{094FFEFF-BAC5-4F53-9643-B122742D6CD6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteTecnowise", "TesteTecnowise\TesteTecnowise.csproj", "{D9A57BA3-B53C-40AC-A13B-622091532A75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteTecnowise", "TesteTecnowise\TesteTecnowise.csproj", "{D9A57BA3-B53C-40AC-A13B-622091532A75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{A56FD69E-B74D-41DF-A751-F2640B13143A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A56FD69E-B74D-41DF-A751-F2640B13143A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A56FD69E-B74D-41DF-A751-F2640B13143A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{094FFEFF-BAC5-4F53-9643-B122742D6CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{094FFEFF-BAC5-4F53-9643-B122742D6CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{094FFEFF-BAC5-4F53-9643-B122742D6CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{094FFEFF-BAC5-4F53-9643-B122742D6CD6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9A57BA3-B53C-40AC-A13B-622091532A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9A57BA3-B53C-40AC-A13B-622091532A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A57BA3-B53C-40AC-A13B-622091532A75}.Release|Any CPU.ActiveCfg = Release|Any CPU

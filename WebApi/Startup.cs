@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace WebApi
 {
@@ -38,11 +39,34 @@ namespace WebApi
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new Info
+                    {
+                        Title = "Teste Tecnowise Cliente",
+                        Version = "v1",
+                        Description = "Projeto de teste ASP.Net Core",
+                        Contact = new Contact
+                        {
+                            Name = "Fábio Moreira",
+                            Url = "https://github.com/fabiosmoreira"
+                        }
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.RoutePrefix = "help";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tecnowise Clientes Api");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
